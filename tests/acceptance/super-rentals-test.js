@@ -48,7 +48,7 @@ module('Acceptance | super rentals', function (hooks) {
     assert.dom('nav a.menu-index').hasText('SuperRentals');
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-contact').hasText('Contact');
-    
+
     //Click each item and make sure they land on the expected page
     await click('nav a.menu-about');
     assert.equal(currentURL(), '/about');
@@ -56,6 +56,5 @@ module('Acceptance | super rentals', function (hooks) {
     assert.equal(currentURL(), '/getting-in-touch');
     await click('nav a.menu-index');
     assert.equal(currentURL(), '/');
-    
   });
 });
