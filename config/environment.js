@@ -1,4 +1,9 @@
 'use strict';
+const fs = require('fs')
+const dotEnvFile    = `./.env`;
+
+if (fs.existsSync(dotEnvFile)) console.info(`using dotenv file: ${dotEnvFile}`)
+else console.warn(`dot-env file not found: ${dotEnvFile}, assuming env vars are passed manually`)
 
 module.exports = function (environment) {
   let ENV = {
